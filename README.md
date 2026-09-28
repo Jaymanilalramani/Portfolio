@@ -2,7 +2,7 @@
 
 > A modern, responsive personal portfolio website showcasing my projects, skills, and experience as a **Full-Stack Developer**.
 
-🔗 **Live Demo:** [https://Jaymanilalramani.github.io/CodeAlpha_Portfolio](unique-macaron-94a607.netlify.app)
+🔗 **Live Demo:** [unique-macaron-94a607.netlify.app]
 
 ---
 
