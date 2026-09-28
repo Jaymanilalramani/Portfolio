@@ -2,7 +2,7 @@
 
 A modern, fully responsive personal portfolio website built with pure **HTML, CSS & JavaScript**.
 
-🔗 **Live Demo:** [unique-macaron-94a607.netlify.app](https://app.netlify.com/projects/unique-macaron-94a607/overview)
+🔗 **Live Demo:** [unique-macaron-94a607.netlify.app](unique-macaron-94a607.netlify.app)
 
 ---
 
