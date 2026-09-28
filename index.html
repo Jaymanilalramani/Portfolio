@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================= SEO / SOCIAL ================= -->
+  <title>Jay Manilal Ramani | Frontend &amp; Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Jay Manilal Ramani — Computer Engineering undergraduate and Frontend &amp; Full-Stack Developer from Dhule, India. Passionate about web development, machine learning and IoT." />
+  <meta name="author" content="Jay Manilal Ramani" />
+  <meta name="keywords" content="Jay Manilal Ramani, frontend developer, full-stack developer, web developer, machine learning, IoT, portfolio, Dhule, SVKM's" />
+  <meta name="theme-color" content="#0b0e1a" />
+  <meta name="color-scheme" content="dark light" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jay Manilal Ramani | Frontend &amp; Full-Stack Developer" />
+  <meta property="og:description" content="Projects, skills, experience and contact details of Jay Manilal Ramani." />
+  <meta property="og:image" content="profile.jpg" />
+
+  <!-- Inline SVG favicon: "JR" monogram, no extra network request -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='.5' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Poppins,sans-serif' font-size='46' font-weight='700' fill='%23fff' text-anchor='middle'%3EJR%3C/text%3E%3C/svg%3E" />
+
+  <!-- ================= FONTS ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- ================= ICONS ================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+  <!-- ================= STYLES ================= -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- If JavaScript is disabled, reveal-on-scroll elements must stay visible -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <!-- Keyboard users can jump straight past the navigation -->
+  <a class="skip-link" href="#about">Skip to main content</a>
+
+  <!-- Thin gradient bar showing how far down the page you are -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Jay Manilal Ramani — home">
+        <span class="brand-mark" aria-hidden="true">JR</span>
+        <span class="brand-text">Jay Ramani</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#certifications">Certificates</a></li>
+          <li><a class="nav-link nav-link--cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dim layer behind the mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+  <main id="main">
+
+    <!-- ================= 2. HERO ================= -->
+    <section class="hero" id="home">
+      <div class="blob blob--one" aria-hidden="true"></div>
+      <div class="blob blob--two" aria-hidden="true"></div>
+      <div class="blob blob--three" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="badge reveal">Open to internships &amp; full-time roles</p>
+
+          <h1 class="reveal">
+            Hi, I'm <span class="text-gradient">Jay Manilal Ramani</span>
+          </h1>
+
+          <!-- Roles are typed out by script.js; the first one is a no-JS fallback -->
+          <p class="hero-role reveal">
+            <span class="role-prefix">I'm a </span>
+            <span class="typewriter" id="typewriter" aria-live="polite">Frontend Developer</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-text reveal">
+            Computer Engineering undergraduate passionate about Full-Stack Web Development,
+            Machine Learning and IoT. I love building real-world solutions that solve
+            meaningful problems — from pixel-perfect interfaces to machine-learned predictions
+            and sensor-driven automation.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn--primary" href="#projects">
+              <i class="fa-solid fa-layer-group" aria-hidden="true"></i> View My Work
+            </a>
+            <!-- Replace with your real repo/site when you have one -->
+            <a class="btn btn--ghost" href="Jay_Ramani_CE.pdf" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
+            </a>
+          </div>
+
+          <!-- Social icons with hover glow -->
+          <ul class="social-row reveal" aria-label="Social profiles">
+            <li>
+              <a class="social-btn" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" title="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="https://linkedin.com/in/jay-ramani-b672742b7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="mailto:jayramani74@gmail.com" aria-label="Email me" title="Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="tel:+917972297448" aria-label="Call me" title="Phone">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+
+          <dl class="hero-stats reveal">
+            <div class="stat">
+              <dt class="stat-label">Projects built</dt>
+              <dd><span class="counter" data-target="5">0</span><span class="stat-suffix">+</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-label">Certifications</dt>
+              <dd><span class="counter" data-target="7">0</span><span class="stat-suffix">+</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-label">Unstop Hackathon</dt>
+              <dd><span class="stat-suffix stat-suffix--lead">Top 5</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Profile photo: circular, gradient ring, soft glow -->
+        <div class="hero-visual reveal">
+          <div class="photo-frame">
+            <div class="photo-glow" aria-hidden="true"></div>
+            <img
+              class="profile-img"
+              id="profileImg"
+              src="profile.jpg"
+              alt="Portrait of Jay Manilal Ramani"
+              width="400" height="400"
+              onerror="this.classList.add('img-failed'); this.removeAttribute('onerror');" />
+            <span class="photo-initials" id="photoInitials" aria-hidden="true">JR</span>
+          </div>
+
+          <div class="float-card float-card--a"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</div>
+          <div class="float-card float-card--b"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</div>
+          <div class="float-card float-card--c"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll down to the About section">
+        <span class="mouse" aria-hidden="true"><span class="mouse-wheel"></span></span>
+        <span class="scroll-cue-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ================= 3. ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">About</p>
+          <h2>A little bit <span class="text-gradient">about me</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <!-- Bio + small photo -->
+          <article class="card about-card reveal">
+            <div class="about-photo-row">
+              <img class="about-photo" src="profile.jpg" alt="Jay Manilal Ramani" width="120" height="120" loading="lazy" onerror="this.style.display='none';" />
+              <div>
+                <h3 class="about-name">Jay Manilal Ramani</h3>
+                <p class="about-role">Frontend &amp; Full-Stack Developer · AI/ML Enthusiast</p>
+                <p class="about-loc"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dhule, Maharashtra, India</p>
+              </div>
+            </div>
+
+            <p>
+              I'm a Computer Engineering undergraduate at SVKM's Institute of Technology, Dhule,
+              working towards my B.Tech in Computer Science &amp; Engineering (Dr. Babasaheb Ambedkar
+              Technological University). I started with the fundamentals — C, C++, data structures
+              and OOP — and grew into building complete products on the web.
+            </p>
+            <p>
+              Most of my work sits where software meets the physical world: an IoT water-quality
+              monitor that predicts contamination with machine learning, a hospital platform that
+              removes the guesswork from doctor allocation, and a cultural-tourism platform that
+              puts an entire state in your browser. I care about clean code, accessible
+              interfaces and shipping things that actually get used.
+            </p>
+
+            <ul class="tick-list">
+              <li>Building responsive, accessible web interfaces from scratch</li>
+              <li>Applying ML models to real sensor and image data</li>
+              <li>Wiring IoT devices to live dashboards and alerts</li>
+              <li>Constant contributor to open-source projects on GitHub</li>
+            </ul>
+          </article>
+
+          <!-- Education cards -->
+          <div class="edu-wrap">
+            <h3 class="block-title reveal"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+
+            <article class="card edu-card reveal" data-delay="0">
+              <div class="edu-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+              <div>
+                <h4>B.Tech, Computer Science &amp; Engineering</h4>
+                <p class="edu-meta">SVKM's Institute of Technology, Dhule</p>
+                <p class="edu-meta">Affiliated to Dr. Babasaheb Ambedkar Technological University</p>
+                <div class="edu-tags">
+                  <span class="tag"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Aug 2023 – May 2027 (Ongoing)</span>
+                  <span class="tag tag--accent"><i class="fa-solid fa-star" aria-hidden="true"></i> CGPA 7.44</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card edu-card reveal" data-delay="1">
+              <div class="edu-icon edu-icon--alt"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
+              <div>
+                <h4>Core Curriculum Focus</h4>
+                <p class="edu-meta">Data Structures &amp; Algorithms · Object-Oriented Programming · DBMS</p>
+                <p class="edu-meta">Electives in Machine Learning, Web Systems and Computer Networks</p>
+                <div class="edu-tags">
+                  <span class="tag"><i class="fa-solid fa-brain" aria-hidden="true"></i> Machine Learning</span>
+                  <span class="tag"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Full-Stack</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card edu-card reveal" data-delay="2">
+              <div class="edu-icon edu-icon--alt2"><i class="fa-solid fa-flask" aria-hidden="true"></i></div>
+              <div>
+                <h4>Beyond the Syllabus</h4>
+                <p class="edu-meta">Internship at Octanet Services, hackathon finals, open-source work and a set of AI certifications from Databricks, Microsoft, Google and Infosys Springboard.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. SKILLS ================= -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>My <span class="text-gradient">toolkit</span></h2>
+          <p class="section-sub">Bars are a self-assessment of how confidently I work with each tool — not a certification.</p>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-code" aria-hidden="true"></i></span> Languages</h3>
+            <ul class="chips">
+              <li class="chip">C</li><li class="chip">C++</li><li class="chip">Python</li><li class="chip">Java</li>
+            </ul>
+            <div class="bars">
+              <div class="bar">
+                <span class="bar-label">C / C++</span>
+                <span class="bar-track"><span class="bar-fill" data-level="88"></span></span>
+                <span class="bar-value">88%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">Python</span>
+                <span class="bar-track"><span class="bar-fill" data-level="85"></span></span>
+                <span class="bar-value">85%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">Java</span>
+                <span class="bar-track"><span class="bar-fill" data-level="72"></span></span>
+                <span class="bar-value">72%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal" data-delay="1">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span> Web &amp; Frontend</h3>
+            <ul class="chips">
+              <li class="chip">HTML5</li><li class="chip">CSS3</li><li class="chip">JavaScript</li>
+              <li class="chip">Responsive Design</li><li class="chip">REST APIs</li>
+            </ul>
+            <div class="bars">
+              <div class="bar">
+                <span class="bar-label">HTML5</span>
+                <span class="bar-track"><span class="bar-fill" data-level="95"></span></span>
+                <span class="bar-value">95%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">CSS3</span>
+                <span class="bar-track"><span class="bar-fill" data-level="90"></span></span>
+                <span class="bar-value">90%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">JavaScript</span>
+                <span class="bar-track"><span class="bar-fill" data-level="85"></span></span>
+                <span class="bar-value">85%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal" data-delay="2">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-server" aria-hidden="true"></i></span> Backend &amp; Database</h3>
+            <ul class="chips">
+              <li class="chip">Node.js</li><li class="chip">MySQL</li><li class="chip">SQL</li>
+            </ul>
+            <div class="bars">
+              <div class="bar">
+                <span class="bar-label">Node.js</span>
+                <span class="bar-track"><span class="bar-fill" data-level="78"></span></span>
+                <span class="bar-value">78%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">MySQL</span>
+                <span class="bar-track"><span class="bar-fill" data-level="80"></span></span>
+                <span class="bar-value">80%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">SQL / Queries</span>
+                <span class="bar-track"><span class="bar-fill" data-level="82"></span></span>
+                <span class="bar-value">82%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-brain" aria-hidden="true"></i></span> AI / ML &amp; IoT</h3>
+            <ul class="chips">
+              <li class="chip">Machine Learning</li><li class="chip">AI &amp; Chatbot Concepts</li><li class="chip">IoT</li>
+            </ul>
+            <div class="bars">
+              <div class="bar">
+                <span class="bar-label">Machine Learning</span>
+                <span class="bar-track"><span class="bar-fill" data-level="80"></span></span>
+                <span class="bar-value">80%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">AI &amp; Chatbots</span>
+                <span class="bar-track"><span class="bar-fill" data-level="76"></span></span>
+                <span class="bar-value">76%</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">IoT</span>
+                <span class="bar-track"><span class="bar-fill" data-level="74"></span></span>
+                <span class="bar-value">74%</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card skill-card reveal" data-delay="1">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span> Core Computer Science</h3>
+            <ul class="tick-list">
+              <li>Object-Oriented Programming &amp; design patterns</li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Database Management Systems</li>
+              <li>Computer networks &amp; operating systems</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal" data-delay="2">
+            <h3 class="skill-title"><span class="skill-ico"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></span> Tools &amp; Workflow</h3>
+            <ul class="chips">
+              <li class="chip"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+              <li class="chip"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</li>
+              <li class="chip"><i class="fa-solid fa-code" aria-hidden="true"></i> VS Code</li>
+              <li class="chip"><i class="fa-brands fa-github" aria-hidden="true"></i> Copilot</li>
+              <li class="chip"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</li>
+              <li class="chip"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Turbo C</li>
+              <li class="chip"><i class="fa-solid fa-diagram-sequence" aria-hidden="true"></i> StarUML</li>
+            </ul>
+            <ul class="tick-list">
+              <li>Git branching &amp; clean commit history</li>
+              <li>Linux terminal for builds and deployments</li>
+              <li>UML &amp; system design documentation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Things I've <span class="text-gradient">built</span></h2>
+          <p class="section-sub">Academic, internship and hackathon work. Filter by type or hover a card for a quick read.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web Apps</button>
+          <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false">AI / ML &amp; IoT</button>
+          <button class="filter-btn" type="button" data-filter="internship" aria-pressed="false">CodeAlpha</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- 1 -->
+          <article class="card project-card reveal" data-category="web" data-delay="0">
+            <div class="project-thumb thumb--1" aria-hidden="true">
+              <i class="fa-solid fa-mountain-sun"></i>
+              <span>Tourism</span>
+            </div>
+            <div class="project-body">
+              <h3>Eco &amp; Cultural Tourism Platform</h3>
+              <p class="project-desc">
+                A unified platform for cultural tourism in Jharkhand — rich destination previews,
+                an AI chatbot that answers visitor questions and AR/VR-ready tours, with online
+                booking built in.
+              </p>
+              <ul class="chips chips--sm">
+                <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li>
+                <li class="chip">AI &amp; Chatbot</li><li class="chip">AR/VR</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace href with the specific repository URL -->
+                <a class="btn btn--sm btn--ghost" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <span class="project-tag">State-level project</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="card project-card reveal" data-category="web" data-delay="1">
+            <div class="project-thumb thumb--2" aria-hidden="true">
+              <i class="fa-solid fa-user-doctor"></i>
+              <span>Healthcare</span>
+            </div>
+            <div class="project-body">
+              <h3>Patient-Doctor Appointment System</h3>
+              <p class="project-desc">
+                A hospital-management platform that streamlines patient scheduling and doctor
+                allocation, with a Node.js back end and a normalised MySQL schema for patients,
+                doctors, departments and slots.
+              </p>
+              <ul class="chips chips--sm">
+                <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li>
+                <li class="chip">Node.js</li><li class="chip">MySQL</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace href with the specific repository URL -->
+                <a class="btn btn--sm btn--ghost" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <span class="project-tag">Full-stack</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="card project-card reveal" data-category="ai" data-delay="2">
+            <div class="project-thumb thumb--3" aria-hidden="true">
+              <i class="fa-solid fa-droplet"></i>
+              <span>IoT + ML</span>
+            </div>
+            <div class="project-body">
+              <h3>IoT Water Quality Monitor</h3>
+              <p class="project-desc">
+                Real-time, fully automated water-quality assessment. Sensor readings are fed
+                into a machine-learning model that classifies samples and surfaces an
+                interactive HTML dashboard with alerts.
+              </p>
+              <ul class="chips chips--sm">
+                <li class="chip">HTML</li><li class="chip">CSS</li>
+                <li class="chip">IoT</li><li class="chip">Machine Learning</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace href with the specific repository URL -->
+                <a class="btn btn--sm btn--ghost" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <span class="project-tag">Hardware + Software</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="card project-card reveal" data-category="internship" data-delay="0">
+            <div class="project-thumb thumb--4" aria-hidden="true">
+              <i class="fa-solid fa-images"></i>
+              <span>Task 01</span>
+            </div>
+            <div class="project-body">
+              <h3>Responsive Image Gallery</h3>
+              <p class="project-desc">
+                CodeAlpha Internship Task 1. A responsive gallery with a lightbox viewer,
+                category filters, live search and a dark mode toggle — all in vanilla
+                HTML, CSS and JavaScript.
+              </p>
+              <ul class="chips chips--sm">
+                <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace href with the specific repository URL -->
+                <a class="btn btn--sm btn--ghost" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <span class="project-tag">CodeAlpha</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="card project-card reveal" data-category="internship" data-delay="1">
+            <div class="project-thumb thumb--5" aria-hidden="true">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Task 02</span>
+            </div>
+            <div class="project-body">
+              <h3>Calculator</h3>
+              <p class="project-desc">
+                CodeAlpha Internship Task 2. A clean calculator covering all arithmetic
+                operations with full keyboard support, percentage handling and a
+                responsive keypad.
+              </p>
+              <ul class="chips chips--sm">
+                <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: replace href with the specific repository URL -->
+                <a class="btn btn--sm btn--ghost" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+                </a>
+                <span class="project-tag">CodeAlpha</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="projectsEmpty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ================= 6. EXPERIENCE ================= -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Journey &amp; <span class="text-gradient">milestones</span></h2>
+          <p class="section-sub">Internships, competitions and community work so far.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Jul – Aug 2024</p>
+            <h3>Web Development Intern</h3>
+            <p class="timeline-org"><i class="fa-solid fa-building" aria-hidden="true"></i> Octanet Services Pvt. Ltd.</p>
+            <p class="timeline-desc">
+              Built and shipped responsive front-end features, fixed cross-browser issues and
+              worked directly with the design and back-end teams in an agile sprint setup.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">Web Development</li><li class="chip">Front-end</li><li class="chip">Team Collaboration</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="1">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Aug 2025</p>
+            <h3>Top 5 — Unstop Hackathon</h3>
+            <p class="timeline-org"><i class="fa-solid fa-trophy" aria-hidden="true"></i> GEC Siwan, Jharkhand</p>
+            <p class="timeline-desc">
+              One of only five teams out of hundreds to reach the final stage of the Unstop
+              hackathon, presenting a working product to an industry jury panel.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">Hackathon</li><li class="chip">Finalist</li><li class="chip">Rapid Prototyping</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="2">
+            <span class="timeline-dot timeline-dot--live" aria-hidden="true"></span>
+            <p class="timeline-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2024 – Present</p>
+            <h3>Open Source Contributor</h3>
+            <p class="timeline-org"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</p>
+            <p class="timeline-desc">
+              Actively reading, reviewing and contributing to open-source repositories — fixing
+              bugs, improving documentation and learning from maintainer feedback.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">Open Source</li><li class="chip">Git</li><li class="chip">Code Review</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal" data-delay="3">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Jul 2023</p>
+            <h3>Avishkar Idea Competition</h3>
+            <p class="timeline-org"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> SVKM's Institute of Technology, Dhule</p>
+            <p class="timeline-desc">
+              Presented an original IoT-based project idea at the college-level innovation
+              competition, competing against teams from across the institute.
+            </p>
+            <ul class="chips chips--sm">
+              <li class="chip">IoT</li><li class="chip">Innovation</li><li class="chip">Presentation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. CERTIFICATIONS ================= -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Certifications</p>
+          <h2>Credentials &amp; <span class="text-gradient">badges</span></h2>
+          <p class="section-sub">Industry and platform certifications earned while building in public.</p>
+        </header>
+
+        <div class="certs-grid">
+          <article class="card cert-card reveal" data-delay="0">
+            <span class="cert-icon cert-icon--a"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>
+            <h3>AI Security Fundamentals</h3>
+            <p class="cert-issuer"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2024</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="1">
+            <span class="cert-icon cert-icon--b"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
+            <h3>AI &amp; ML in Business</h3>
+            <p class="cert-issuer"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2024</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="2">
+            <span class="cert-icon cert-icon--c"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+            <h3>AI Aware Badge — AI For All</h3>
+            <p class="cert-issuer"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2024</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="0">
+            <span class="cert-icon cert-icon--d"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+            <h3>Databricks</h3>
+            <p class="cert-issuer">Data &amp; AI learning path</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="1">
+            <span class="cert-icon cert-icon--e"><i class="fa-brands fa-microsoft" aria-hidden="true"></i></span>
+            <h3>Microsoft</h3>
+            <p class="cert-issuer">Cloud &amp; developer foundations</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="2">
+            <span class="cert-icon cert-icon--f"><i class="fa-brands fa-google" aria-hidden="true"></i></span>
+            <h3>Google</h3>
+            <p class="cert-issuer">Technology &amp; productivity track</p>
+          </article>
+
+          <article class="card cert-card reveal" data-delay="0">
+            <span class="cert-icon cert-icon--g"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
+            <h3>Infosys Springboard</h3>
+            <p class="cert-issuer">Skill development programme</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. CONTACT ================= -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's <span class="text-gradient">work together</span></h2>
+          <p class="section-sub">Got an internship offer, a project idea, or just a question? Send a message — I usually reply within a day.</p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Info cards -->
+          <div class="contact-info">
+            <article class="contact-item reveal" data-delay="0">
+              <span class="contact-icon contact-icon--mail"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+              <div>
+                <p class="contact-label">Email</p>
+                <button class="copy-email" type="button" id="copyEmail" data-email="jayramani74@gmail.com" title="Click to copy">
+                  jayramani74@gmail.com
+                </button>
+              </div>
+            </article>
+
+            <article class="contact-item reveal" data-delay="1">
+              <span class="contact-icon contact-icon--phone"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+              <div>
+                <p class="contact-label">Phone</p>
+                <a class="contact-value" href="tel:+917972297448">+91 79722 97448</a>
+              </div>
+            </article>
+
+            <article class="contact-item reveal" data-delay="2">
+              <span class="contact-icon contact-icon--pin"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+              <div>
+                <p class="contact-label">Location</p>
+                <p class="contact-value">Dhule, Maharashtra, India</p>
+              </div>
+            </article>
+
+            <article class="contact-item reveal" data-delay="3">
+              <span class="contact-icon contact-icon--status"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+              <div>
+                <p class="contact-label">Availability</p>
+                <p class="contact-value">Open to internships &amp; full-time roles</p>
+              </div>
+            </article>
+
+            <div class="contact-socials reveal" data-delay="4">
+              <a class="social-btn social-btn--lg" href="https://github.com/Jaymanilalramani" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a class="social-btn social-btn--lg" href="https://linkedin.com/in/jay-ramani-b672742b7" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a class="social-btn social-btn--lg" href="mailto:jayramani74@gmail.com" aria-label="Email" title="Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a class="social-btn social-btn--lg" href="tel:+917972297448" aria-label="Phone" title="Phone">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Working contact form (client-side validation + mailto) -->
+          <form class="card contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+              <p class="error" id="nameError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+              <p class="error" id="emailError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship enquiry / Project idea" />
+              <p class="error" id="subjectError" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a little about the role or project…" required></textarea>
+              <p class="error" id="messageError" role="alert"></p>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+            </button>
+
+            <p class="form-note">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              This form validates in your browser and opens your mail app — nothing is sent to a server.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 9. FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> <strong>Jay Manilal Ramani</strong>. All rights reserved.</p>
+
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-built">
+        Hand-written HTML, CSS &amp; JavaScript — no frameworks, no build step.
+        Image Gallery &amp; Calculator built as <strong>CodeAlpha</strong> internship tasks.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating back-to-top button -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Transient message used for copy/success feedback -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
